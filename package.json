@@ -1,16 +1,13 @@
 {
   "name": "@jetonpeche/random-ts",
-  "version": "1.0.1",
-  "description": "Générer des nombres aléatoires en utilisant la cryptographie",
+  "version": "1.0.3",
+  "description": "Générer des nombres et des strings aléatoires en utilisant la cryptographie",
   "author": "jetonpeche",
   "main": "dist/random.js",
   "types": "dist/Random.d.ts",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsc"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/JetonpecheCorp/Random-TS.git"

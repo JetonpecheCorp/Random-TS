@@ -39,3 +39,17 @@ let nombre = Random.next(1, 100);
 // nombre decimal avec deux chiffres apres la virgule
 let nombreDecimal = Random.next(1, 100, true, 2);
 ```
+
+## nextString
+
+Permet de générer une chaîne de caractère aléatoire
+
+### exemple
+
+```js
+// chaine avec caractères spéciaux
+let chaine = Random.nextString(10);
+
+// chaine sans caractères spéciaux
+let chaine1 = Random.nextString(10, false);
+```

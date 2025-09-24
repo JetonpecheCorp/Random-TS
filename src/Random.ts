@@ -3,7 +3,7 @@ import * as crypto from 'crypto';
 export class Random
 {
     /**
-     * récupérer un nombre d'éléments aléatoires dans une liste avec la cryptographie
+     * récupérer un / des élément(s) aléatoires dans une liste avec la cryptographie
      * 
      * @param _list liste à partir de laquelle on va récupérer les éléments
      * @param _nbElement nombre d'éléments à récupérer
@@ -106,5 +106,51 @@ export class Random
         let resultat = (nombreAleatoire % RANGE) + min;
 
         return _autoriserDecimal ?  resultat / multiplier : resultat;
+    }
+
+    /**
+     * Générer une chaîne de caractère aléatoire avec la cryptographie
+     * 
+     * @param _nbCharacter nombre de caractères dans la chaine
+     * @param _hasSpecialCharacter Accepte les caractères spéciaux (defaut true)
+     * 
+     * @returns La chaine aléatoire générée
+     */
+    static nextString(_nbCharacter: number, _hasSpecialCharacter: boolean = true): string
+    {
+        if(_nbCharacter <= 0)
+            return "";
+
+        const LISTE_CARACTERE = [
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+            "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+            "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+        ];
+
+        const LISTE_CARACTERE_SPECIAUX = [
+            "!", "@", "#", "$", "£", "%", "^", "&", "*", "\\", "(", ")", "_", "-", 
+            "+", "=", "[", "{", "]", "}", ";", ":", "<", ">", "|", ".", "/", "?", "§"
+        ];
+
+        let listeCaractereMelanger = this.shuffle(LISTE_CARACTERE);
+        let listeCaractereSpeMelanger = this.shuffle(LISTE_CARACTERE_SPECIAUX);
+
+        let retour: string[] = [];
+        let nbCaractereSpeciaux: number = _hasSpecialCharacter ? this.next(1, _nbCharacter) : 0;
+
+        for (let i = 0; i < _nbCharacter; i++) 
+        {
+            if(i < nbCaractereSpeciaux)
+                retour.push(this.getItems(listeCaractereSpeMelanger, 1)[0]);
+            
+            else
+                retour.push(this.getItems(listeCaractereMelanger, 1)[0]);
+        }
+
+        return this.shuffle(retour).join("");
     }
 }
