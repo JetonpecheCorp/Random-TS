@@ -12,12 +12,15 @@
     "type": "git",
     "url": "https://github.com/JetonpecheCorp/Random-TS.git"
   },
-  "keywords": ["random", "cryptographie"],
+  "keywords": [
+    "random",
+    "cryptographie"
+  ],
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^25.9.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^6.0.3"
   }
 }
