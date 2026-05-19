@@ -1,22 +1,20 @@
 {
-  "name": "@jetonpeche/date-extension",
-  "version": "1.0.6",
-  "description": "Ajout de methodes d'extension au type Date",
+  "name": "@jetonpeche/random-ts",
+  "version": "1.1.0",
+  "description": "Générer des nombres et des strings aléatoires en utilisant la cryptographie",
   "author": "jetonpeche",
-  "main": "dist/DateExtension.js",
+  "main": "dist/random.js",
+  "types": "dist/Random.d.ts",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsc"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JetonpecheCorp/date-extension-TS.git"
+    "url": "https://github.com/JetonpecheCorp/Random-TS.git"
   },
   "keywords": [
-    "date",
-    "extension"
+    "random",
+    "cryptographie"
   ],
   "license": "ISC",
   "type": "commonjs",
