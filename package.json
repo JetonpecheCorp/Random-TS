@@ -1,6 +1,6 @@
 {
   "name": "@jetonpeche/date-extension",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Ajout de methodes d'extension au type Date",
   "author": "jetonpeche",
   "main": "dist/DateExtension.js",
