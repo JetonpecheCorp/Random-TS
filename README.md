@@ -16,14 +16,13 @@ let listeRetour = Random.getItems(liste, 4);
 
 ## shuffle
 
-Permet de mélanger une liste aléatoirement
+Permet de mélanger la liste aléatoirement
 
 ### exemple
 
 ```js
 let liste = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-let listeRetour = Random.shuffle(liste);
+Random.shuffle(liste);
 ```
 
 ## next
